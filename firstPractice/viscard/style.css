@@ -1,0 +1,147 @@
+*{
+    box-sizing: content-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+
+.cardcontainer{
+    position: relative;
+}
+
+.cardcontainer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 0;
+
+    background:linear-gradient(45deg,gray,black);
+    opacity: 0.5;
+    
+}
+
+.card{
+    width:500px;
+    height:350px;
+    background-color: black;
+
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px 3px gray;
+
+}
+
+.card label{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card img{
+    width: 120px;
+}
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.card-number-container{
+    width: 100%;
+    color: white;
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+}
+
+input[id='card-number']{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #f4f4f4;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+span#border{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: transform 0.5s linear;
+}
+
+input[id='card-number']:hover span#border{
+    border-color: red;
+}
+
+.card .second-container{
+    width: 100%;
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.holder-container{
+    width: 50%;
+}
+
+.expdatecontainer{
+    width: 24%;
+}
+
+.ccvcontainer{
+    width: 24%;
+}
+
+.second-container input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #f4f4f4;
+    font-size: 1rem;
+}
+
+.second-container span{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #fff;
+    transform: translateY(-8px);
+}
+
+ .second-container input{
+    margin-top: 10px;
+}
+
+/* hover part */
+input[id='card-number']:hover span{
+    left: 0;
+}
+
+/* active part */
+/* #card-number:active span{
+    transform:translateX(0) translateY(5px);
+
+} */
+
